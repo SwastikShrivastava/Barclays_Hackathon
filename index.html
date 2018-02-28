@@ -1,0 +1,584 @@
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" type="text/css" href="files/app.css">
+    </head>
+
+    <body>
+    	
+       	<div id="app" style="display: none">
+    		  <ul id="slide-out" class="side-nav">
+			    <li><div class="user-view">
+			      <div class="background">
+			        <img src="files/office.png">
+			      </div>
+			      <a href="#!user"><img class="circle" src="files/office.png"></a>
+			      <a href="#!name"><span class="white-text name">John Doe</span></a>
+			      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+			    </div></li>
+			    <li><a id="dash_menu"><i class="material-icons">dashboard</i>Dashboard</a></li>
+			    <li><div class="divider"></div></li>
+			    <li><a id="groups_menu"><i class="material-icons">people</i>Groups</a></li>
+			    <li><a id="tx_menu"><i class="material-icons">attach_money</i>Transaction Requests</a></li>
+			    <li><a id="profile_menu"><i class="material-icons">account_box</i>Profile</a></li>
+			    <li><a id="settings_menu"><i class="material-icons">settings</i>Settings</a></li>
+			    <li><div class="divider"></div></li>
+			    <li><a id="logout_menu"><i class="material-icons">arrow_back</i>Logout</a></li>
+			    <li><div class="divider"></div></li>
+			  </ul>
+			  <div class="navbar-fixed">
+    		  <nav class="teal">
+			    <div class="nav-wrapper">
+			      <a href="#!" class="brand-logo center"><i class="material-icons">cloud</i>App Name</a>
+			      <ul class="left">
+			        <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
+			      </ul>
+			    </div>
+			  </nav>
+			</div>
+
+			 <div class="row" id="settings_app">
+			 	<center>
+			 		<h5><i class="material-icons">settings</i>Settings</h5>
+			 	</center>
+			  <div class="row container" id="permissionCard">
+			  	 <div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="files/done.gif">
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">Great Job! Now Add Bank Accounts<i class="material-icons right teal-text">control_point</i></span>
+				      <p>Add Bank accounts and provide your consent.</p>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Add Bank<i class="material-icons right">close</i></span>
+				      
+				      <div class="row">
+				      	<br>
+				      	<div class="col s12">
+				      		  <div class="input-field col s12">
+							    <select>
+							      <option value="" disabled selected>Choose your option</option>
+							      <option value="1">psd201-bank-x--uk</option>
+							      <option value="2">psd201-bank-y--uk</option>
+							    </select>
+							    <label>Bank Selection</label>
+							  </div>
+				      	</div>
+				      	<div class="col s12">
+				      		  <div class="input-field col s12">
+							    <i class="material-icons prefix">face</i>
+					            <input id="acct_name" type="text" class="validate">
+					            <label for="acct_name">Account Name</label>
+							  </div>
+				      	</div>
+				      	<div class="col s12">
+				      		  <p>Allow this App to access your Basic account info and transactions data. App does not store this data anywhere.</p>
+				      		  <p>
+							      <input name="agreement" type="checkbox" id="test5" />
+							      <label for="test5">Agree</label>
+							    </p>
+				      	</div>
+				      	<div class="col s12">
+				      		<center>
+								<button class="btn waves-effect waves-light teal disabled" id="add_bank">Add Bank</button>
+							</center>  
+				      	</div>
+				      </div>
+
+				    </div>
+				  </div>
+			  </div>
+
+			  <div class="row container" id="createJoinGroup">
+			  	 <div class="card">
+			  	 	<div class="card-content">
+		              <span class="card-title">Group Settings</span>
+		              <ul class="collapsible" data-collapsible="accordion">
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">group_add</i>Create Group</div>
+					      <div class="collapsible-body"><span>
+					      	<div class="row">
+								<div class="input-field col s12">
+									<input id="group_id" type="text" class="validate">
+									<label for="group_id">Group Name</label>
+								</div>
+								<div class="input-field col s12">
+									<input id="group_pw" type="password" class="validate">
+									<label for="group_pw">Set Password</label>
+								</div>
+								<center>
+									<button class="btn waves-effect waves-light teal create-g-btn">Create</button>
+								</center>
+							</div>
+					      </span></div>
+					    </li>
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">group</i>Join Group</div>
+					      <div class="collapsible-body"><span>
+					      	<div class="row">
+								<div class="input-field col s12">
+									<input id="group_id_j" type="text" class="validate">
+									<label for="group_id_j">Group Name</label>
+								</div>
+								<div class="input-field col s12">
+									<input id="group_pw_j" type="password" class="validate">
+									<label for="group_pw_j">Group Password</label>
+								</div>
+								<center>
+									<button class="btn waves-effect waves-light teal join-g-btn">Join</button>
+								</center>
+							</div>
+					      </span></div>
+					    </li>
+					  </ul>
+		            </div>
+			  	 	
+			  	 </div>
+			  </div>
+
+			  <div class="row container" id="revokePermissions">
+			  	 <div class="card">
+			  	 	<div class="card-content">
+		              <span class="card-title">Revoke Permissions</span>
+		              <center>
+							<button class="btn waves-effect waves-light red revoke-per">Revoke Now</button>
+					  </center>
+		            </div>
+		         </div>
+		      </div>   	
+
+
+			</div>
+			  <div class="row container" id="dash_app" style="display: none">
+			 	<center>
+			 		<h5><i class="material-icons">dashboard</i>Dashboard</h5>
+			 	</center>
+			 	 <div class="row">
+			 	 	<div class="col s12">
+				 	 <div class="card  grey lighten-3">
+					    <div class="card-content center">
+					      <h4>$2314</h4>
+					      <p>Total Spent!</p>
+					    </div>
+					 </div>
+					 </div>
+				 </div>
+				 <div class="row">
+			 	 	<div class="col s12">
+				 	 <div class="card">
+					    <div id="thisMonth">
+					      
+					    </div>
+					 </div>
+					 </div>
+				 </div>
+			  </div>
+    	</div>
+    	<div id="Tfa" class="appScrean" style="display: none;">
+    		<div class="row">
+    			<br>
+    			<br>
+    			<div class="col s12 center">
+    				<h4 class="teal-text">Fill in the Email OTP!</h4>
+    			</div>
+    		</div>
+    		<div class="row">
+    				<div class="col s12 center">
+    					<img src="files/email.gif" height="30%" width="auto" class="circle">
+    				</div>
+    		</div>
+    		<div class="row container">
+    			<div class="col s12">
+    				<div class="row">
+						<div class="input-field col s12">
+							<input id="secret" type="email" class="validate">
+							<label for="secret">Email Secret</label>
+						</div>
+					</div>
+					<center>
+						<button class="btn waves-effect waves-light teal email-secret">Submit</button>
+					</center>
+    			</div>
+    		</div>
+    		<div style="position: absolute;bottom: 2%;color: black; left: 50%;transform: translate(-50%,-50%);">
+    			APP NAME | INDIA
+    		</div>
+    	</div>
+    	<div id="loginSignup" class="appScrean" style="display: none">
+    		<div class="row">
+    			<div class="col s12" align="center">
+    				<img src="files/logo.gif" height="30%" width="auto">
+    			</div>
+    			<div class="col s12" align="center">
+    				<h4 class="teal-text">App Name!</h4>
+    			</div>
+    		</div>
+    		<div class="row">
+    		<div class="container white">
+				<ul class="tabs teal">
+					<li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
+					<li class="tab col s3"><a class="white-text" href="#register">register</a></li>
+				</ul>
+				<div id="login" class="col s12">
+					<div class="col s12">
+						<div class="form-container">
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix teal-text">email</i>
+									<input id="email_log" type="email" class="validate">
+									<label for="email_log">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix teal-text">lock</i>
+									<input id="password_log" type="password" class="validate">
+									<label for="password_log">Password</label>
+								</div>
+							</div>
+							<br>
+							<center>
+								<button class="btn waves-effect waves-light teal connect">Connect</button>
+								<br>
+								<br>
+								<a href="">Forgotten password?</a>
+							</center>
+						</div>
+					</div>
+				</div>
+				<div id="register" class="col s12">
+					<div class="col s12">
+						<div class="form-container">
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix teal-text">account_circle</i>
+									<input id="last_name" type="text" class="validate">
+									<label for="last_name">Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix teal-text">email</i>
+									<input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix teal-text">lock</i>
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+							</div>
+							<center>
+								<button class="btn waves-effect waves-light teal signup-btn">Submit</button>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="position: absolute;bottom: 2%;color: black; left: 50%;transform: translate(-50%,-50%);">
+    			APP NAME | INDIA
+    		</div>
+    	</div>
+    	<div id="loader" class="appScrean" style="display: block">
+  			<img src="files/logo.gif" height="35%" width="auto" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+  		</div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  	  <script src="https://code.highcharts.com/highcharts.js"></script>
+	  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  	  <script type="text/javascript">
+  	   $(document).ready(function(){
+
+  	   		$('select').material_select();
+  	   		$('.collapsible').collapsible();
+
+  	   		$('input[name="agreement"]').change(function () {
+			    if (this.checked) {
+			        $("#add_bank").removeClass("disabled")
+			    }
+			    else
+			    {
+			    	$("#add_bank").addClass("disabled")
+			    }
+			});
+
+  	   		$("#logout_menu").click(function(){
+  	   			window.location.reload()
+  	   		});
+
+  	   		$("#dash_menu").click(function(){
+  	   			$("#settings_app").css("display","none");
+  	   			$("#dash_app").css("display","block");
+  	   			$('.button-collapse').sideNav('hide');
+  	   		});
+
+  	   		$("#settings_menu").click(function(){
+  	   			$("#settings_app").css("display","block");
+  	   			$("#dash_app").css("display","none");
+  	   			$('.button-collapse').sideNav('hide');
+  	   		});
+
+//////////////////////////////////////////////////AJAX//////////////
+
+
+
+			var ip = "http://192.168.43.104:8085/";
+
+  	  		function doAjax(route,data){
+				return new Promise(function(resolve,reject){
+					var settings = {
+					  "async": true,
+					  "crossDomain": true,
+					  "url": ip+route,
+					  "method": "POST",
+					  "headers": {
+					    "content-type": "application/x-www-form-urlencoded",
+					    "cache-control": "no-cache"
+					  },
+					  "data": data
+					  }
+
+					$.ajax(settings).done(function (response) {
+					  resolve(response);
+					}).fail(function(jqXHR, textStatus, errorThrown){
+					  Materialize.toast('Error!', 4000)
+					});
+				})
+			}
+
+			function oAuth(){
+				setTimeout(function(){
+					$("#loader").css("display","none");
+					$("#loginSignup").css("display","block");
+					Materialize.toast('Secure Auth Session!', 4000)
+				},3000)
+			}
+
+			oAuth();
+
+
+
+//////////////////////////////////////////////PERMISSION///////////////////
+
+				
+			$(".create-g-btn").click(function(){
+				Materialize.toast('Wait! Creating...', 1500)
+				
+				var data = {
+					"email":JSON.parse(localStorage.userdata).email,
+					"secret": JSON.parse(localStorage.userdata).secret,
+					"group":$("#group_id").val(),
+					"password":$("#group_pw").val()
+				}
+
+				doAjax("createGroup",data).then(function(result){
+					if(result=="OKAY")
+					{
+						Materialize.toast('Group Created Succesfully!', 1500)
+					}
+					else
+					{
+						Materialize.toast('Error in Creating!', 4000)
+					}
+				}).catch(function(){
+					Materialize.toast('Error in Creating!', 4000)
+				});
+			});
+
+
+			$(".join-g-btn").click(function(){
+				Materialize.toast('Wait! Searching...', 1500)
+				
+				var data = {
+					"email":JSON.parse(localStorage.userdata).email,
+					"secret": JSON.parse(localStorage.userdata).secret,
+					"group":$("#group_id").val(),
+					"password":$("#group_pw").val()
+				}
+
+				doAjax("createGroup",data).then(function(result){
+					if(result=="OKAY")
+					{
+						Materialize.toast('Group Created Succesfully!', 1500)
+					}
+					else
+					{
+						Materialize.toast('Error in Creating!', 4000)
+					}
+				}).catch(function(){
+					Materialize.toast('Error in Creating!', 4000)
+				});
+			});
+			
+
+
+			$("#add_bank").click(function(){
+				Materialize.toast('Wait! Adding...', 1500)
+				var bnk = $("select").val()==1?"psd201-bank-x--uk":"psd201-bank-y--uk";
+
+				var data = {
+					"email":JSON.parse(localStorage.userdata).email,
+					"account": $("#acct_name").val(),
+					"bank":bnk,
+					"permission":true
+				}
+
+				doAjax("addBankAccount",data).then(function(result){
+					if(result.email!=undefined)
+					{
+						localStorage.userdata = JSON.stringify(result);
+						Materialize.toast('Hurray! Bank Added Succesfully!', 1500)
+					}
+					else
+					{
+						Materialize.toast('Error in Adding!', 4000)
+					}
+				}).catch(function(){
+					Materialize.toast('Error in Adding!', 4000)
+				});
+			});
+
+
+
+			$(".connect").click(function(){
+				Materialize.toast('Hold your horses!', 1500)
+				var data = {
+					"email":$("#email_log").val(),
+					"password": $("#password_log").val()
+				}
+
+				doAjax("login",data).then(function(result){
+					if(result=="OKAY")
+					{
+						localStorage.email = $("#email_log").val();
+						$("#loginSignup").css("display","none");
+						$("#Tfa").css("display","block");
+						Materialize.toast('Yeah! Good Job!', 1500)
+					}
+					else
+					{
+						Materialize.toast('Error!', 4000)
+					}
+				})
+			});
+
+			$(".signup-btn").click(function(){
+
+				Materialize.toast('Submitting Data!', 1500)
+				var data = {
+					"email":$("#email").val(),
+					"password": $("#password").val(),
+					"name": $("#last_name").val()
+				}
+
+				doAjax("signup",data).then(function(result){
+					if(result=="OKAY")
+					{
+						Materialize.toast('Signup Succesful! Login to Continue', 4000)
+					}
+					else
+					{
+						Materialize.toast('Error!', 4000)
+					}
+				}).catch(function(){
+					console.log("adsf");
+				})
+			});
+
+			$(".email-secret").click(function(){
+
+				Materialize.toast('Verifying!', 1500)
+				var data = {
+					"token":$("#secret").val(),
+					"email":localStorage.email
+				}
+
+				doAjax("verifyTwo",data).then(function(result){
+					if(result.email!=undefined)
+					{
+						localStorage.userdata = JSON.stringify(result);
+						$("#Tfa").css("display","none");
+						$("#app").css("display","block");
+						Materialize.toast('Two Factor Login Succesful!', 1500)
+					}
+					else
+					{
+						Materialize.toast('Error in Verifying!', 4000)
+					}
+				}).catch(function(){
+					console.log("adsf");
+				})
+			});
+
+
+  	   		$(".button-collapse").sideNav();
+	  	  	$('.modal').modal();
+
+
+
+			Highcharts.chart('thisMonth', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market shares January, 2015 to May, 2015'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'IE',
+            y: 56.33
+        }, {
+            name: 'Chrome',
+            y: 24.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Firefox',
+            y: 10.38
+        }, {
+            name: 'Safari',
+            y: 4.77
+        }, {
+            name: 'Opera',
+            y: 0.91
+        }, {
+            name: 'Other',
+            y: 0.2
+        }]
+    }]
+});
+
+  	   });
+
+  	  </script>
+    </body>
+  </html>
