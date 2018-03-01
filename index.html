@@ -167,6 +167,24 @@
 					 </div>
 					 </div>
 				 </div>
+				  <div class="row">
+			 	 	<div class="col s6">
+				 	 <div class="card  grey lighten-3">
+					    <div class="card-content center">
+					      <h5 id="todaySpent">$2314</h5>
+					      <p>Spent Today!</p>
+					    </div>
+					 </div>
+					 </div>
+					 <div class="col s6">
+				 	 <div class="card  grey lighten-3">
+					    <div class="card-content center">
+					      <h5 id="totalBal">EUR 2314</h5>
+					      <p>Total Balance!</p>
+					    </div>
+					 </div>
+					 </div>
+				 </div>
 				 <div class="row">
 			 	 	<div class="col s12">
 				 	 <div class="card z-depth-3">
@@ -196,8 +214,7 @@
 				 	 <div class="card ">
 					    <div class="card-content">
 					       <ul class="collection with-header" id="pending_req">
-					        <li class="collection-header"><h5>Pending Requests</h5></li>
-					        <li class="collection-item"><div>Alvin<a href="" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+					        
 					      </ul>
 					      
 					    </div>
@@ -209,8 +226,7 @@
 				 	 <div class="card ">
 					    <div class="card-content">
 					       <ul class="collection with-header" id="your_req">
-					        <li class="collection-header"><h6>Your Requests</h6></li>
-					        <li class="collection-item"><div>Alvin<a href="" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+					        
 					      </ul>
 					      
 					    </div>
@@ -247,7 +263,7 @@
     			</div>
     		</div>
     		<div style="position: absolute;bottom: 2%;color: black; left: 50%;transform: translate(-50%,-50%);">
-    			APP NAME | INDIA
+    			TROY | INDIA
     		</div>
     	</div>
     	<div id="loginSignup" class="appScrean" style="display: none">
@@ -256,7 +272,7 @@
     				<img src="files/logo.gif" height="30%" width="auto">
     			</div>
     			<div class="col s12" align="center">
-    				<h4 class="teal-text">App Name!</h4>
+    				<h4 class="teal-text">TROY</h4>
     			</div>
     		</div>
     		<div class="row">
@@ -325,7 +341,7 @@
 			</div>
 		</div>
 		<div style="position: absolute;bottom: 2%;color: black; left: 50%;transform: translate(-50%,-50%);">
-    			APP NAME | INDIA
+    			TROY | INDIA
     		</div>
     	</div>
 
@@ -574,6 +590,7 @@
 						console.log(values);
 						setTimeout(()=>{
 							$("#totalSpent").html("EUR " + values.sum_up_all);
+							$("#todaySpent").html("EUR " + values.sum_up_all);
 							renderChart1(values.totalAmt);
 							renderChart2(values.acc,values.keys);
 						},1200);
